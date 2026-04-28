@@ -244,8 +244,8 @@ elif menu == "Загрузка и Анализ":
 
                 st.dataframe(
                     results.style
-                    .applymap(highlight_verdict, subset=['Итоговый Вердикт'])
-                    .applymap(highlight_critical, subset=['pH']),
+                    .map(highlight_verdict, subset=['Итоговый Вердикт'])
+                    .map(highlight_critical, subset=['pH']),
                     use_container_width=True
                 )
 
